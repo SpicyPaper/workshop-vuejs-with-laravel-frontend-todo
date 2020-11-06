@@ -7,19 +7,29 @@ Modifiez v-col pour afficher tous les utilisateurs.
 (Indice 2 : Attention appliquez les changements sur v-col et pas v-card)
 -->
 
+<!--
+TODO 14
+
+Mettez le texte du nom, de l'email et du coffee_counter en rouge si l'utilisateur actuellement parcouru
+dans l'itération est l'utilisateur connecté
+
+(Indice 1 : class)
+(Indice 2 : == ? :)
+-->
+
 <template>
   <v-row v-if="authUser">
-    <v-col v-for="user in users" :key="user.id"
+    <v-col
       cols=12>
       <v-card
         class="mx-auto"
       >
-        <v-card-title :class="user.id == authUser.id ? 'red--text' : 'blue--text'" style="justify-content: center;">
-          {{ user.name }}
+        <v-card-title style="justify-content: center;">
+          {{ authUser.name }}
           -
-          ({{ user.email }})
+          ({{ authUser.email }})
           <v-spacer></v-spacer>
-          {{ user.coffee_counter }}
+          {{ authUser.coffee_counter }}
         </v-card-title>
       </v-card>
     </v-col>
