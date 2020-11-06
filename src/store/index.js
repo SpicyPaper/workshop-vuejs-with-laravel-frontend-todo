@@ -32,7 +32,6 @@ axios.defaults.baseURL = "http://workshop-vuejs.test/api"
 export default new Vuex.Store({
   state: {
     token: localStorage.getItem('access_token') || null,
-    coffee_counter: 0,
     authUser: null,
     users: [],
   },
@@ -47,9 +46,6 @@ export default new Vuex.Store({
     },
     destroyToken(state) {
       state.token = null
-    },
-    updateCoffeeCounter(state, new_number) {
-      state.coffee_counter = new_number
     },
     updateUsers(state, users) {
       state.users = users
