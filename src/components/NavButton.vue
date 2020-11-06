@@ -17,21 +17,3 @@ Utilisez les props pour abstraire un maximum d'éléments de ce composant.
 (Indice 1 : Inspirez-vous du composant CoffeeButton)
 (Indice 2 : Les éléments que vous devez abtraire sont : couleur, lien, texte, icon, sub icon)
 -->
-<template>
-  
-      <v-btn :class="blue" class="darken-3 mr-3" :to="{ name: 'counter' }">
-        <span class="mr-2">Counter</span>
-        <v-icon>mdi-coffee</v-icon>
-        <v-icon v-if="subIcon">mdi-more-horizontal</v-icon>
-      </v-btn>
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
