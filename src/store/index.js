@@ -1,6 +1,6 @@
 
 /*
-TODO 5.1
+TODO 3.1
 
 Créez un getter nommé loggedIn (le nom est important !) permettant de savoir si l'utilisateur est connecté.
 

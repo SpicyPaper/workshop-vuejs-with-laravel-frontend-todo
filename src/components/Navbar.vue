@@ -1,6 +1,6 @@
 
 <!--
-TODO 5.2
+TODO 5
 
 Afficher les boutons Scoreboard, Counter et Logout uniquement quand l'utilisateur est loggedIn
 Et afficher les boutons Register et Login unquement dans l'utilisateur n'est PAS loggedIn
