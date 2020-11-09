@@ -45,7 +45,7 @@ Utilisez ce nouveau composant pour modifier tous les boutons de la navbar : Scor
 
     <v-spacer></v-spacer>
 
-    <div>
+    <div v-if="loggedIn">
       <v-btn class="green darken-3 mr-3" :to="{ name: 'scoreboard' }">
         <span class="mr-2">Scoreboard</span>
         <v-icon>mdi-earth</v-icon>
@@ -60,7 +60,7 @@ Utilisez ce nouveau composant pour modifier tous les boutons de la navbar : Scor
         <v-icon>mdi-logout</v-icon>
       </v-btn>
     </div>
-    <div>
+    <div v-else>
       <v-btn class="grey darken-3 mr-3" :to="{ name: 'register' }">
         <span class="mr-2">Register</span>
         <v-icon>mdi-account-plus</v-icon>
@@ -79,6 +79,9 @@ export default {
   components: {
   },
   computed: {
+    loggedIn() {
+      return this.$store.getters.loggedIn
+    }
   }
 }
 </script>
