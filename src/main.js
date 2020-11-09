@@ -15,17 +15,17 @@ Ajoutez le router et le store
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-//import routes from './routes'
-//import store from './store'
+import routes from './routes'
+import store from './store'
 import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
-/*
+
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-//  routes
+  routes
 })
 
 router.beforeEach((to, from, next) => {
@@ -53,12 +53,11 @@ router.beforeEach((to, from, next) => {
     next() // make sure to always call next()!
   }
 })
-*/
 
 new Vue({
-  //el: "#app",
-  //router,
-  //store,
+  el: "#app",
+  router,
+  store,
   vuetify,
   render: h => h(App)
 })
