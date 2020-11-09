@@ -19,7 +19,7 @@ Rediriger les utilisateurs déconnectés sur la home page.
 <template>
   <div>
     <h2>You are on the logout page. There is nothing to do here!</h2>
-    <p>Return on the Home page</p>
+    <p>Return on the <router-link :to="{ name: 'home' }">Home page</router-link></p>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
   created() {
     this.$store.dispatch("destroyToken")
       .then(() => {
+        this.$router.push({ name: "home" })
       })
   }
 }
