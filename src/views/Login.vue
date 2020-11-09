@@ -16,14 +16,17 @@ Faire fonctionner le formulaire Login
       <v-form
         v-model="valid"
         lazy-validation
+        @submit.prevent="login"
       >
         <v-text-field
+          v-model="username"
           label="E-mail"
           type="email"
           required
         ></v-text-field>
 
         <v-text-field
+          v-model="password"
           label="Password"
           type="password"
           required
@@ -55,10 +58,8 @@ export default {
   methods: {
     login() {
       this.$store.dispatch("retrieveToken", {
-        /*
-        username: ,
-        password: ,
-        */
+        username: this.username,
+        password: this.password,
       })
         .then(() => {
           this.$router.push({ name: "counter" })

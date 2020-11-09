@@ -38,6 +38,9 @@ export default new Vuex.Store({
   getters: {
     orderedUsers(state) {
       return state.users.sort((a, b) => (a.coffee_counter < b.coffee_counter) ? 1 : -1)
+    },
+    loggedIn(state) {
+      return state.token != null
     }
   },
   mutations: {
