@@ -8,6 +8,7 @@ Rendre la page de Login accessible au moyen d'une route
 */
 
 import Home from './views/Home.vue'
+import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import Logout from './views/Logout.vue'
 import Counter from './views/Counter.vue'
@@ -18,6 +19,14 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+    meta: {
+      requiresVisitor: true, // Only accessible by unlogged users
+    }
   },
   {
     path: '/register',
