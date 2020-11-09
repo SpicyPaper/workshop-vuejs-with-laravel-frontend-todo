@@ -16,26 +16,31 @@ Faire fonctionner le formulaire Register et créez un compte
       <v-form
         v-model="valid"
         lazy-validation
+        @submit.prevent="register"
       >
         <v-text-field
+          v-model="name"
           label="Name"
           type="text"
           required
         ></v-text-field>
 
         <v-text-field
+          v-model="email"
           label="E-mail"
           type="email"
           required
         ></v-text-field>
 
         <v-text-field
+          v-model="password"
           label="Password"
           type="password"
           required
         ></v-text-field>
 
         <v-text-field
+          v-model="password_confirmation"
           label="Password Confirmation"
           type="password"
           required
@@ -68,12 +73,10 @@ export default {
   methods: {
     register() {
       this.$store.dispatch("register", {
-        /*
-        name: ,
-        email: ,
-        password: ,
-        password_confirmation: ,
-        */
+        name: this.name,
+        email: this.email,
+        password: this.password,
+        password_confirmation: this.password_confirmation,
       })
         .then(() => {
           this.$router.push({ name: "login" })
