@@ -11,6 +11,7 @@ Ajouter le composant NavBar à l'endroit indiqué sur cette page.
 <template>
   <v-app>
     <!-- Ajoutez le composant NavBar ici -->
+    <NavBar></NavBar>
     <v-main>
       <v-container>
         <router-view></router-view>
@@ -21,6 +22,7 @@ Ajouter le composant NavBar à l'endroit indiqué sur cette page.
 
 <script>
 // import TestComponent from './'
+import NavBar from './components/Navbar.vue'
 
 export default {
   name: 'App',
@@ -32,6 +34,7 @@ export default {
   },
 
   components: {
+    NavBar,
   },
 
   computed: {
