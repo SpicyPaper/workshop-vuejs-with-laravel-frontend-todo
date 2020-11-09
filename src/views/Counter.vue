@@ -56,7 +56,7 @@ export default {
       this.$store.dispatch("increaseCoffeeCounter", 1)
     },
     decrease() {
-      console.log("Counter - 1")
+      this.$store.dispatch("decreaseCoffeeCounter", 1)
     },
     getCurrentCoffee() {
       this.$store.dispatch("fetchCoffeeCounter")
