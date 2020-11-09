@@ -34,6 +34,7 @@ export default new Vuex.Store({
     token: localStorage.getItem('access_token') || null,
     authUser: null,
     users: [],
+    coffee_counter: 0,
   },
   getters: {
     orderedUsers(state) {
@@ -56,6 +57,9 @@ export default new Vuex.Store({
     updateAuthUser(state, authUser) {
       state.authUser = authUser
     },
+    updateCoffeeCounter(state, number) {
+      state.coffee_counter = number
+    }
   },
   actions: {
     fetchAuthUser(context) {
