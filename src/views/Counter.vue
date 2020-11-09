@@ -36,6 +36,7 @@ Le bouton décrémenter doit décrémenter le compteur dans la DB.
       <span class="coffee-counter">{{ coffee_counter }}</span>
 
       <!-- Ajoutez le composant ici -->
+      <CoffeeButton :action="decrease" :color="'red'" :icon="'minus'" class="ml-5"></CoffeeButton>
     </v-col>
   </v-row>
 </template>
@@ -53,6 +54,9 @@ export default {
   methods: {
     increase() {
       this.$store.dispatch("increaseCoffeeCounter", 1)
+    },
+    decrease() {
+      console.log("Counter - 1")
     },
     getCurrentCoffee() {
       this.$store.dispatch("fetchCoffeeCounter")
