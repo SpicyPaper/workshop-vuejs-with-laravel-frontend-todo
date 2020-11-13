@@ -50,11 +50,7 @@ Utilisez ce nouveau composant pour modifier tous les boutons de la navbar : Scor
         <span class="mr-2">Scoreboard</span>
         <v-icon>mdi-earth</v-icon>
       </v-btn>
-      <v-btn class="blue darken-3 mr-3" :to="{ name: 'counter' }">
-        <span class="mr-2">Counter</span>
-        <v-icon>mdi-coffee</v-icon>
-        <v-icon>mdi-unfold-more-horizontal</v-icon>
-      </v-btn>
+      <NavButton></NavButton>
       <v-btn class="red darken-3 mr-3" :to="{ name: 'logout' }">
         <span class="mr-2">Logout</span>
         <v-icon>mdi-logout</v-icon>
@@ -74,9 +70,11 @@ Utilisez ce nouveau composant pour modifier tous les boutons de la navbar : Scor
 </template>
 
 <script>
+import NavButton from './NavButton.vue'
 
 export default {
   components: {
+    NavButton,
   },
   computed: {
     loggedIn() {
