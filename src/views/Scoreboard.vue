@@ -20,16 +20,17 @@ dans l'itération est l'utilisateur connecté
 <template>
   <v-row v-if="authUser">
     <v-col
-      cols=12>
+      cols=12
+      v-for="user in users" :key="user.id">
       <v-card
         class="mx-auto"
       >
         <v-card-title style="justify-content: center;">
-          {{ authUser.name }}
+          {{ user.name }}
           -
-          ({{ authUser.email }})
+          ({{ user.email }})
           <v-spacer></v-spacer>
-          {{ authUser.coffee_counter }}
+          {{ user.coffee_counter }}
         </v-card-title>
       </v-card>
     </v-col>
