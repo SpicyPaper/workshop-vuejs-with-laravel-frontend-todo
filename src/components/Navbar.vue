@@ -50,7 +50,7 @@ Utilisez ce nouveau composant pour modifier tous les boutons de la navbar : Scor
         <span class="mr-2">Scoreboard</span>
         <v-icon>mdi-earth</v-icon>
       </v-btn>
-      <NavButton></NavButton>
+      <NavButton :color="'blue'" :link="'counter'" :text="'Counter'" :icon="'coffee'" :subIcon="'unfold-more-horizontal'" ></NavButton>
       <v-btn class="red darken-3 mr-3" :to="{ name: 'logout' }">
         <span class="mr-2">Logout</span>
         <v-icon>mdi-logout</v-icon>
