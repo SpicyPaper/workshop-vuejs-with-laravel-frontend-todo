@@ -25,7 +25,7 @@ dans l'itération est l'utilisateur connecté
       <v-card
         class="mx-auto"
       >
-        <v-card-title style="justify-content: center;">
+        <v-card-title :class="user.id == authUser.id ? 'red--text' : 'blue--text'" style="justify-content: center;">
           {{ user.name }}
           -
           ({{ user.email }})
@@ -58,9 +58,6 @@ export default {
 }
 </script>
 
-<style scoped>
-  .coffee-counter {
-    font-weight: bold;
-    font-size: 1.3em;
-  }
+<style>
+
 </style>
