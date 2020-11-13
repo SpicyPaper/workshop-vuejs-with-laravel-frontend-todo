@@ -11,7 +11,8 @@ Modifiez v-col pour afficher tous les utilisateurs.
 TODO 14
 
 Mettez le texte du nom, de l'email et du coffee_counter en rouge si l'utilisateur actuellement parcouru
-dans l'itération est l'utilisateur connecté
+dans l'itération est l'utilisateur connecté et mettez en bleu sinon.
+Utilisez les classes de vuetify "red--text" et "blue--text" pour changer la couleur du texte.
 
 (Indice 1 : class)
 (Indice 2 : == ? :)
