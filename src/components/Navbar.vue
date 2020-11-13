@@ -46,25 +46,16 @@ Utilisez ce nouveau composant pour modifier tous les boutons de la navbar : Scor
     <v-spacer></v-spacer>
 
     <div v-if="loggedIn">
-      <v-btn class="green darken-3 mr-3" :to="{ name: 'scoreboard' }">
-        <span class="mr-2">Scoreboard</span>
-        <v-icon>mdi-earth</v-icon>
-      </v-btn>
-      <NavButton :color="'blue'" :link="'counter'" :text="'Counter'" :icon="'coffee'" :subIcon="'unfold-more-horizontal'" ></NavButton>
-      <v-btn class="red darken-3 mr-3" :to="{ name: 'logout' }">
-        <span class="mr-2">Logout</span>
-        <v-icon>mdi-logout</v-icon>
-      </v-btn>
+      <NavButton :color="'green'" :link="'scoreboard'" :text="'Scoreboard'" :icon="'earth'"></NavButton>
+
+      <NavButton :color="'blue'" :link="'counter'" :text="'Counter'" :icon="'coffee'" :subIcon="'unfold-more-horizontal'"></NavButton>
+      
+      <NavButton :color="'red'" :link="'logout'" :text="'Logout'" :icon="'logout'"></NavButton>
     </div>
     <div v-else>
-      <v-btn class="grey darken-3 mr-3" :to="{ name: 'register' }">
-        <span class="mr-2">Register</span>
-        <v-icon>mdi-account-plus</v-icon>
-      </v-btn>
-      <v-btn class="indigo darken-3 mr-3" :to="{ name: 'login' }">
-        <span class="mr-2">Login</span>
-        <v-icon>mdi-login</v-icon>
-      </v-btn>
+      <NavButton :color="'grey'" :link="'register'" :text="'Register'" :icon="'account-plus'"></NavButton>
+
+      <NavButton :color="'indigo'" :link="'login'" :text="'Login'" :icon="'login'"></NavButton>
     </div>
   </v-app-bar>
 </template>
